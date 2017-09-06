@@ -18,7 +18,7 @@ Version: 2.4.6
 Release: 45%{?dist}
 URL: http://httpd.apache.org/
 Source0: http://www.apache.org/dist/httpd/httpd-%{version}.tar.bz2
-Source1: centos-noindex.tar.gz
+Source1: escore-noindex.tar.gz
 Source2: httpd.logrotate
 Source3: httpd.sysconf
 Source4: httpd-ssl-pass-dialog
@@ -489,7 +489,7 @@ EOF
 
 # Handle contentdir
 mkdir $RPM_BUILD_ROOT%{contentdir}/noindex
-tar xzf $RPM_SOURCE_DIR/centos-noindex.tar.gz \
+tar xzf $RPM_SOURCE_DIR/escore-noindex.tar.gz \
         -C $RPM_BUILD_ROOT%{contentdir}/noindex/ \
         --strip-components=1
 
